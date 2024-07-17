@@ -132,7 +132,7 @@ export default function Profile() {
   const handleShowListings = async () => {
     try {
       setShowListingsError(false);
-      const res = await fetch(`https://realstate-api-2024.vercel.app/api/user/listings/${currentUser._id}`);
+      const res = await fetch(`https://realstate-api-2024.vercel.app/api/user/listing/${currentUser._id}`);
       const data = await res.json();
       if (data.success === false) {
         setShowListingsError(true);
