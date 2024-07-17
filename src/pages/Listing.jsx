@@ -33,7 +33,7 @@ export default function Listing() {
     const fetchListing = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://realstate-api-2024.vercel.app/api/listing/get/${params.listingId}`);
+        const res = await fetch(`https://realstate-api-2024.vercel.app/api/listing/get/${params.listingId}`);
         const data = await res.json();
         if (data.success === false) {
           setError(true);

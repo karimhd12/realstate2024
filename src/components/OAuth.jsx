@@ -14,7 +14,7 @@ export default function OAuth() {
 
       const result = await signInWithPopup(auth, provider);
 
-      const res = await fetch('http://realstate-api-2024.vercel.app/api/auth/google', {
+      const res = await fetch('https://realstate-api-2024.vercel.app/api/auth/google', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
