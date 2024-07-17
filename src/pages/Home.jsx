@@ -1,6 +1,7 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/jsx-key */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-undef */
 import React,{ useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
-        const res = await fetch('https://realstate-api-2024.vercel.app/api/listing/get?offer=true&limit=4');
+        const res = await fetch('http://realstate-api-2024.vercel.app/api/listing/get?offer=true&limit=4');
         const data = await res.json();
         setOfferListings(data);
         fetchRentListings();
@@ -28,7 +29,7 @@ export default function Home() {
     };
     const fetchRentListings = async () => {
       try {
-        const res = await fetch('https://realstate-api-2024.vercel.app/api/listing/get?type=rent&limit=4');
+        const res = await fetch('http://realstate-api-2024.vercel.app/api/listing/get?type=rent&limit=4');
         const data = await res.json();
         setRentListings(data);
         fetchSaleListings();
@@ -39,7 +40,7 @@ export default function Home() {
 
     const fetchSaleListings = async () => {
       try {
-        const res = await fetch('https://realstate-api-2024.vercel.app/api/listing/get?type=sale&limit=4');
+        const res = await fetch('http://realstate-api-2024.vercel.app/api/listing/get?type=sale&limit=4');
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
