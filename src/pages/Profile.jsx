@@ -117,7 +117,7 @@ export default function Profile() {
   const handleSignOut = async () => {
     try {
       dispatch(signOutUserStart());
-      const res = await fetch('/api/auth/signout');
+      const res = await fetch('https://realstate-api-2024.vercel.app/api/auth/signout');
       const data = await res.json();
       if (data.success === false) {
         dispatch(deleteUserFailure(data.message));
