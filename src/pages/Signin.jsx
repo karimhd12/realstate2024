@@ -25,7 +25,7 @@ export default function Signin() {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const res = await fetch('api/auth/signin',
+      const res = await fetch('https://realstate-api-2024.vercel.app/api/auth/signin',
         {
           method:'post',
           headers:{

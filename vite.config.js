@@ -5,10 +5,6 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   server:{
     proxy:{
-      '/api':{
-        target:"https://realstate-api-2024.vercel.app",
-        secure:false,
-      }
     }
   },
   plugins: [react()],
